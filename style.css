@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+  background: rgba(164, 194, 74, 1);
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(164, 194, 74, 1) 0%,
+    rgba(96, 166, 31, 1) 100%
+  );
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(0%, rgba(164, 194, 74, 1)),
+    color-stop(100%, rgba(96, 166, 31, 1))
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(164, 194, 74, 1) 0%,
+    rgba(96, 166, 31, 1) 100%
+  );
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(164, 194, 74, 1) 0%,
+    rgba(96, 166, 31, 1) 100%
+  );
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    rgba(164, 194, 74, 1) 0%,
+    rgba(96, 166, 31, 1) 100%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    rgba(164, 194, 74, 1) 0%,
+    rgba(96, 166, 31, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4c24a', endColorstr='#60a61f', GradientType=1 );
+}
+
+.contenedor {
+  height: 937px;
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-columns: repeat(10, 2fr);
+  grid-template-rows: repeat(10, 2fr);
+}
+
+.contenedor > .superiorIzquierda {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.contenedor > .superiorDerecha {
+  grid-column-start: 10;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.contenedor > #board {
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-start: 2;
+  grid-row-end: 10;
+}
+
+.contenedor > .nombre {
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-start: 9;
+  grid-row-end: 10;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.contenedor > .inferiorIzquierda {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+.contenedor > .inferiorDerecha {
+  grid-column-start: 10;
+  grid-column-end: 11;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+.contenedor > .jugador{
+  display: flex;
+  justify-content: center;
+}
+
+/* HUMANO */
+.contenedor > #player {
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-start: 10;
+  grid-row-end: 11;
+}
+
+/* JUGADOR IZQUIERDA */
+.contenedor > #pc2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 10;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* JUGADOR SUPERIOR */
+.contenedor > #pc1 {
+  grid-column-start: 2;
+  grid-column-end: 10;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+/* JUGADOR DERECHA */
+.contenedor > #pc3 {
+  grid-column-start: 10;
+  grid-column-end: 11;
+  grid-row-start: 2;
+  grid-row-end: 10;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nombre > h1 {
+  margin: 0 auto;
+  font-size: 3em;
+  color: rgba(255, 255, 255, .5);
+}
+
+.ficha{  
+  background-repeat: no-repeat;
+  border-radius: 4px;
+  background-size: 100% 100%;
+}
+
+.contenedor > #pc3 > .ficha,
+.contenedor > #pc2 > .ficha{
+  width: 75px;
+  height: 130px !important;
+  transform: rotate(90deg);
+}
+
+.contenedor > #board {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.contenedor > #board > .ficha {
+  width: 50px;
+  height: 75px;
+  transform: rotate(90deg);
+  margin: 0 13px;
+}
+
+.jugador > .ficha {
+  width: 75px;
+  height: 130px;
+  margin: 0 5px;
+}
+
+#turnos {
+  margin: 0 auto;
+  font-size: 2em;
+  color: rgba(255, 255, 255, .5);
+  vertical-align: middle;
+  cursor: default;
+}
+
+#boton {
+  vertical-align: middle;
+  width: 73px;
+  height: 42px;
+  color: white;
+  font-weight: 500;
+}
+
+.swal2-actions{
+  display: none !important;
+}
